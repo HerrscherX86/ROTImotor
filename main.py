@@ -20,13 +20,13 @@ def main():
                 print(motor.to_dict())
             elif choice == "3":
                 id = int(input("ID: "))
-                merk = input("Merk: ")
+                merk = input("Merek: ")
                 model = input("Model: ")
                 eng = input("Engine Type: ")
                 use_case.create_motor(id, merk, model, eng)
             elif choice == "4":
                 id = int(input("ID: "))
-                merk = input("Merk: ")
+                merk = input("Merek: ")
                 model = input("Model: ")
                 eng = input("Engine Type: ")
                 use_case.update_motor(id, merk, model, eng)

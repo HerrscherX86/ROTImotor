@@ -4,11 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="22e5ec9d-0588-41e4-afed-66dbc4fc930e" name="Changes" comment="Fix Unittest Abstract func">
+    <list default="true" id="22e5ec9d-0588-41e4-afed-66dbc4fc930e" name="Changes" comment="Better CLI details (Maybe?? idk)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_motor_entity.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_motor_entity.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_motor_repository.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_motor_repository.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/test_motor_use_case.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_motor_use_case.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,13 +85,40 @@
       <option name="project" value="LOCAL" />
       <updated>1747311931631</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Patch for better test">
+      <option name="closed" value="true" />
+      <created>1747312592840</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1747312592840</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Added more test">
+      <option name="closed" value="true" />
+      <created>1747312610244</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1747312610244</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Better CLI details (Maybe?? idk)">
+      <option name="closed" value="true" />
+      <created>1747312850385</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1747312850385</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initaial Commit" />
     <MESSAGE value="Add Test" />
     <MESSAGE value="Fix Unittest Abstract func" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fix Unittest Abstract func" />
+    <MESSAGE value="Patch for better test" />
+    <MESSAGE value="Added more test" />
+    <MESSAGE value="Better CLI details (Maybe?? idk)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Better CLI details (Maybe?? idk)" />
   </component>
 </project>
