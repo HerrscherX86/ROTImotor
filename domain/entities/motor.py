@@ -15,6 +15,21 @@ class Motor:
 
     @staticmethod
     def from_dict(data: dict):
+        # Pastikan semua key ada
+        for key in ("id", "merk", "model", "engine_type"):
+            if key not in data:
+                raise KeyError(f"Missing key: {key}")
+
+        # Validasi tipe
+        if not isinstance(data["id"], int):
+            raise TypeError("id must be int")
+        if not isinstance(data["merk"], str):
+            raise TypeError("merk must be str")
+        if not isinstance(data["model"], str):
+            raise TypeError("model must be str")
+        if not isinstance(data["engine_type"], str):
+            raise TypeError("engine_type must be str")
+
         return Motor(
             id=data["id"],
             merk=data["merk"],

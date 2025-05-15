@@ -9,6 +9,8 @@ class MotorUseCase:
         return self.repo.get_all()
 
     def get_motor(self, motor_id: int):
+        if not isinstance(motor_id, int):
+            raise TypeError("motor_id must be int")
         return self.repo.get_by_id(motor_id)
 
     def create_motor(self, id: int, merk: str, model: str, engine_type: str):
@@ -20,4 +22,7 @@ class MotorUseCase:
         self.repo.update(motor)
 
     def delete_motor(self, motor_id: int):
+        if not isinstance(motor_id, int):
+            raise TypeError("motor_id must be int")
         self.repo.delete(motor_id)
+
