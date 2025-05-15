@@ -28,3 +28,20 @@ class TestMotorEntity(unittest.TestCase):
         motor = Motor(3, "Suzuki", "GSX", "4-stroke")
         self.assertEqual(motor.id, 3)
         self.assertEqual(motor.engine_type, "4-stroke")
+
+class TestMotorEntityExtra(unittest.TestCase):
+
+    def test_from_dict_success(self):
+        data = {"id":1,"merk":"Yamaha","model":"NMAX","engine_type":"4-stroke"}
+        m = Motor.from_dict(data)
+        self.assertIsInstance(m, Motor)
+
+    def test_from_dict_missing_key(self):
+        data = {"id":2,"merk":"Honda","engine_type":"4-stroke"}  # key 'model' hilang
+        with self.assertRaises(KeyError):
+            Motor.from_dict(data)
+
+    def test_from_dict_wrong_type(self):
+        data = {"id":"tiga","merk":"Suzuki","model":"GSX","engine_type":"4-stroke"}
+        with self.assertRaises(TypeError):
+            Motor.from_dict(data)

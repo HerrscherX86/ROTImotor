@@ -34,3 +34,26 @@ class TestMotorRepositoryJSON(unittest.TestCase):
         self.repo.update(Motor(3, "Suzuki", "GSX-R", "DOHC"))
         updated = self.repo.get_by_id(3)
         self.assertEqual(updated.model, "GSX-R")
+
+class TestMotorRepositoryDelete(unittest.TestCase):
+    def setUp(self):
+        # pastikan file JSON baru
+        if os.path.exists(TEST_JSON_FILE): os.remove(TEST_JSON_FILE)
+        self.repo = MotorRepositoryJSON(TEST_JSON_FILE)
+
+    def tearDown(self):
+        if os.path.exists(TEST_JSON_FILE): os.remove(TEST_JSON_FILE)
+
+    def test_delete_success(self):
+        self.repo.add(Motor(1,"Yamaha","NMAX","4-stroke"))
+        self.repo.delete(1)
+        self.assertEqual(self.repo.get_all(), [])
+
+    def test_delete_not_found(self):
+        with self.assertRaises(ValueError):
+            self.repo.delete(2)
+
+    def test_delete_empty_file(self):
+        # file baru, belum ada data
+        with self.assertRaises(ValueError):
+            self.repo.delete(1)
