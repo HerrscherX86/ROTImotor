@@ -1,7 +1,7 @@
 def show_menu():
-    print("\n1. List")
-    print("2. Read")
-    print("3. Add")
-    print("4. Edit")
-    print("5. Delete")
+    print("\n1. Browse Semua Motor")
+    print("2. Read Berdasarkan ID")
+    print("3. Add Motor")
+    print("4. Edit Motor by ID")
+    print("5. Delete Motor by ID")
     print("6. Exit")
